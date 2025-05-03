@@ -6,5 +6,4 @@ import androidx.navigation.NavController
 
 @Composable
 fun NewNote(navController: NavController,) {
-
 }
