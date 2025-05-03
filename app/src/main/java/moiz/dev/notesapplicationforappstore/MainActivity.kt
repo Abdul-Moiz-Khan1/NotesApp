@@ -36,7 +36,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 @Composable
 fun NotesNavHost(navController: NavHostController) {
     NavHost(navController = navController, startDestination = Routes.SPLASH) {
