@@ -1,6 +1,5 @@
 package moiz.dev.notesapplicationforappstore.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -10,6 +9,12 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import moiz.dev.notesapplicationforappstore.ui.Pink40
+import moiz.dev.notesapplicationforappstore.ui.Pink80
+import moiz.dev.notesapplicationforappstore.ui.Purple40
+import moiz.dev.notesapplicationforappstore.ui.Purple80
+import moiz.dev.notesapplicationforappstore.ui.PurpleGrey40
+import moiz.dev.notesapplicationforappstore.ui.PurpleGrey80
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,

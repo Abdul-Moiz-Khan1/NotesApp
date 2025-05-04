@@ -30,12 +30,20 @@ fun Splash(navController: NavController) {
     val progress by animateLottieCompositionAsState(composition = composition, iterations = 1)
     val context = LocalContext.current
     val prefs = remember { PreferenceHelper(context) }
+    val toWelcome = prefs.isWelcome()
 
     LaunchedEffect(key1 = progress) {
-        if (progress >= 1f) {
+        if (progress >= 1f && !toWelcome) {
             navController.navigate(Routes.WELCOME) {
                 popUpTo(Routes.SPLASH) { inclusive = true }
             }
+        } else if (progress >= 1f) {
+            navController.navigate(Routes.HOME) {
+                popUpTo(Routes.SPLASH) {
+                    inclusive = true
+                }
+            }
+
         }
     }
 
@@ -44,7 +52,7 @@ fun Splash(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-            LottieAnimation(
+        LottieAnimation(
             composition = composition,
             progress = { progress }, modifier = Modifier.size(400.dp)
         )
