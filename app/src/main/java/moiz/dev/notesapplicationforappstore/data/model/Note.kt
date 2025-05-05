@@ -9,6 +9,7 @@ data class Note(
    @PrimaryKey(autoGenerate = true) val id:Int = 0,
    val title:String,
    val content:String,
+   val tag:String,
    val date:String,
    val time:String
 )
